@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数接受参数并弹出</title>
+	<style type="text/css">
+		#wrap{
+			text-align: center;
+			padding-top:10px;
+		}
+		#wrap input{
+			margin:5px;
+		}
+	</style>
+	<script>
+		window.onload = function  () {
+			var oBtn = document.getElementById('btn');
+			var oT = document.getElementsByClassName('input');
+			oBtn.onclick = function () {
+				for(let i = 0; i < oT.length; i++){
+					alert(oT[i].value);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<input type="text" name="" value="北京市" class='input'>
+		<br>
+		<input type="text" name="" value="海淀区" class='input'>
+		<br>
+		<input type="button" name="" value="传参" id="btn">
+	</div>
+</body>
+</html>
