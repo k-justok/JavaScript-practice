@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度输入法</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			font: 12px/1.5 Tahoma;
+		}
+		#wrap{
+			width: 70px;
+			margin:10px auto;
+		}
+		#wrap input{
+			cursor:pointer;
+		}
+		#wrap ul{
+			margin-top: 5px;
+			background: #fff;
+			border:1px solid #9a99ff;
+			list-style-type: none;
+			display: none;
+		}
+		#wrap ul li{
+			list-style: none;
+			width:100%;
+			line-height: 24px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		#li{
+			border-top: 1px solid #9a99ff;
+		}
+		#ul li a{
+			color:#00c;
+			padding:0 5px;
+			display: block;text-shadow: 
+		}
+		#ul li a:hover{
+			background-color: #d9e1f6;
+		}
+		a{
+			text-decoration: none;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oBtn = document.getElementById('btn1');
+			var oUl = document.getElementById('ul');
+			var oLi = document.getElementById('li');
+			oBtn.addEventListener('click',function  () {
+				oUl.style.display = 'block';
+			});
+			oLi.addEventListener('click', function  () {
+				oUl.style.display = 'none';
+			});
+		}
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<input type="button" id="btn1" value="输入法" name="">
+	<ul id="ul">
+		<li><a href="javascript:;">中文</a></li>
+		<li><a href="javascript:;">英文</a></li>
+		<li id="li"><a href="javascript:;" >收起</a></li>
+	</ul>
+</div>
+</body>
+</html>

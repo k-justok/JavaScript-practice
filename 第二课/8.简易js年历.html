@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易js年历</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			bottom: 0;
+		}
+		body{
+			font:12px/1.5 Tahoma;
+		}
+		#wrap{
+			width: 660px;
+			height: 600px;
+			border:1px solid black;
+			margin:20px auto;
+		}
+		#wrap ul{
+			overflow: hidden;
+			padding: 10px;
+		}
+		#wrap ul li{
+			float: left;
+			width: 100px;
+			height: 100px;
+			list-style-type: none;
+			margin:10px 20px;
+			border:1px solid grey;
+			text-align: center;
+			cursor: pointer;
+			padding: 9px;
+		}
+		#wrap ul li strong{
+			display: block;
+			margin-top: 20px;
+			font-size: 18px;
+		}
+		.checked{
+			background-color: #ccc;
+		}
+		#result{
+			display: block;
+			width: 600px;
+			height: 100px;
+			border:1px solid green;
+			margin:10px auto;
+			text-align: center;
+			font-size: 18px;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oLi = document.getElementsByTagName('li');
+			var oResult = document.getElementById('result');
+			var oArray = [
+				'元旦',
+				'元宵',
+				'妇女节',
+				'清明节',
+				'劳动节',
+				'儿童节',
+				'建党节',
+				'建军节',
+				'教师节',
+				'国庆节',
+				'感恩节',
+				'圣诞节'
+			]
+			for (let i = 0; i < oLi.length; i++) {
+				oLi[i].onclick = function () {
+					oResult.innerHTML = oArray[i];
+					for(let j = 0; j < oLi.length; j++) {
+						oLi[j].className = '';
+						oLi[i].className = 'checked';
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<ul>
+			<li><strong>1</strong>JAN</li>
+			<li><strong>2</strong>FER</li>
+			<li><strong>3</strong>MAR</li>
+			<li><strong>4</strong>APR</li>
+			<li><strong>5</strong>MAY</li>
+			<li class='checked'><strong>6</strong>JUN</li>
+			<li><strong>7</strong>JUL</li>
+			<li><strong>8</strong>AUG</li>
+			<li><strong>9</strong>SEP</li>
+			<li><strong>10</strong>OCT</li>
+			<li><strong>11</strong>NOV</li>
+			<li><strong>12</strong>DEC</li>
+		</ul>
+		<span id="result">儿童节</span>
+	</div>
+</body>
+</html>

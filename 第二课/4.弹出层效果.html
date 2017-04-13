@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹出层效果</title>
+	<style type="text/css">
+		#wrap{
+			width: 400px;
+			margin:10px auto;
+			text-align: center;
+		}
+		#div1{
+			position: relative;
+			width: 300px;
+			height: 200px;
+			background-color: red;
+			border:10px solid green;
+			border-top:30px solid skyblue;
+			margin:150px auto;
+			display:none;
+		}
+		#div1 a{
+			text-decoration: none;
+			position: absolute;
+			top:-30px;
+			right:0;
+			color:black;
+		}
+		#a:hover{
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function () {
+			var oBtn1 = document.getElementById('btn1');
+			var oDiv = document.getElementById('div1');
+			var oBody = document.getElementById('body');
+			var oA = document.getElementById('a');
+			oBtn1.onclick = function () {
+				oDiv.style.display = 'block';
+				oBody.style.background = 'grey';
+			}
+			oA.onclick = function  () {
+				oDiv.style.display = 'none';
+				oBody.style.cssText = ''; 
+			}
+		}
+	</script>
+</head>
+<body id="body"> 
+	<div id="wrap">
+		<input type="button" value="弹出层" id="btn1">
+		<div id="div1">
+			<a href="javascript:;" id="a">关闭</a>
+		</div>
+	</div>
+</body>
+</html>

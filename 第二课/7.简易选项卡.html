@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易选项卡</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			font:12px/1.5 Arial;
+		}
+		#wrap{
+			width: 450px;
+			margin:10px auto;
+		}
+		#tab{
+			overflow:hidden;
+			background: #fff;
+			border:1px solid #000;
+		}
+		#tab li{
+			float: left;
+			color:purple;
+			height: 30px;
+			cursor:pointer;
+			line-height: 30px;
+			list-style-type: none;
+			padding:0 20px;
+		}
+		#tab li.checked{
+			color:#000;
+			background-color: skyblue;
+		}
+		#content{
+			border:1px solid #000;
+			border-top-width: 0;
+		}
+		#content ul{
+			line-height: 25px;
+			display: none;
+			margin: 0 30px;
+			padding:10px 0;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function () {
+			var oTab = document.getElementById('tab');
+			var oLi = tab.getElementsByTagName('li');
+			var oContent = document.getElementById('content');
+			var oUl = oContent.getElementsByTagName('ul');
+			for(let i = 0; i< oLi.length; i++){
+				oLi[i].onmouseover = function  () {
+					for(let j = 0; j < oLi.length; j++){
+						oLi[j].className = '';
+						oLi[i].className = 'checked';
+						oUl[j].style.display = 'none';
+						oUl[i].style.display = 'block';
+					}
+
+				}
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<ul id="tab">
+	        <li class="checked">达康书记</li>
+	        <li>育良书记</li>
+	        <li>同伟同志</li>
+	    </ul>
+	    <div id="content">
+	        <ul style="display:block;">
+	            <li>达康书记别低头，GDP会掉</li>
+	            <li>达康书记别流泪，祁厅长会笑</li>
+	            <li>“你要跟我说什么？说！”</li>
+	            <li>“你身穿人民警服，头顶国徽，就不能太任性”</li>
+	            <li>“任命的事无小事”</li>
+	            <li>“千万不要把几百人的事当做小事，一件小事解决不好，完全能够击垮办成的九十九件大事”</li>
+	            <li>“什么玩意儿！”</li>
+	            <li>“不用谢，这是工作!”</li>
+	            <li>“钱不到位，主动辞职”</li>
+	            <li>理想主义者</li>
+	        </ul>
+	        <ul>
+	            <li>为人阴柔</li>
+	            <li>城府极深</li>
+	            <li>要绝对的权力</li>
+	            <li>深谙官场的规则，懂规矩，知道有些规矩破不了</li>
+	            <li>“能不能省点事儿啊”</li>
+	            <li>“你只要不敢坏事，就没人能坏你的事”</li>
+	            <li>“我早就和你说了，和陈岩石走近一些”</li>
+	            <li>“怎么还没有退？找死呢？”</li>
+	            <li>“用权力得来的利益，终究会被新来的权力所魔兽</li>
+	            <li>”再多的钱，都带不到坟墓里去</li>
+	            <li>不是一个坏到骨子里的人</li>
+	        </ul>
+	        <ul>
+	            <li>功利心极重</li>
+	            <li>通知丁义珍，谋杀陈海</li>
+	            <li>23年前中弹不下火线的英雄缉毒队长</li>
+	            <li>“英雄是什么，英雄是权力的工具”</li>
+	            <li>从一个充满理想的热血青年到一个追求功名利禄的腐败分子</li>
+	            <li>对现实屈服</li>
+	            <li>“大家都知道，我们都是从娘胎里来，到坟地里去”</li>
+	            <li>我个人认为是最为真实的一个一个角色</li>
+	            <li>努力过，失败过，被打压过，最终腐败</li>
+	        </ul>
+	    </div>
+	</div>
+</body>
+</html>
